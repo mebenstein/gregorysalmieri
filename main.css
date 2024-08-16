@@ -1,212 +1,154 @@
 :root {
     --black: #000000;
     --white: #ffffff;
-    --red: #14213d;
-    --pale_dark_red: #bb8899;
-    --background: var(--white);
+    --grey: #1c1c1c;
+    --blue: #14213d;
+    --background: var(--blue);
     --foreground: var(--white);
-    --master_width: 700px;
+    --width: 700px;
 }
 
-/* ######################################################################### */
-/* ################################# global ################################ */
-/* ######################################################################### */
+/* global design */
 
 body {
-    font-family: sans-serif;
-    font-size: 23px;
-    font-weight: 300;
-    line-height: 150%;
+    font-family: monospace;
+    font-size: 20px;
     color: var(--foreground);
-    width: var(--master_width);
-    background-color: var(--background);
-    padding: 0 0 10px 0;
+    width: var(--width);
+    background-image: url("assets/pattern.png");
+    background-size: 600px;
     margin: 0 auto 0 auto;
 }
 
-a, a:hover, a:active, a:visited {
-    color: var(--red);
+a {
+    color: var(--foreground);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--red);
     text-decoration: underline;
 }
 
-strong {
-    font-weight: 500;
-}
-
-div.main {
-    width: calc(var(--master_width) - 50px);
-    padding: 1px 25px 15px;
-    margin-bottom: 50px;
-    background-color: 14213d;
-    border-radius: 6px;
-    border: 2px solid var(--black);
-    text-align: center;
-}
-
-h1 {
-    font-size: 60px;
+h1,h2,h3,h4 {
     font-weight: 100;
     text-align: center;
-    color: var(--foreground);
 }
 
-h2 {
-    font-size: 40px;
-    font-weight: 100;
-    text-align: center;
-    margin: -10px 0 30px 0;
-}
+h1{font-size: 60px;}
+h2{font-size: 40px;margin: -10px 0 30px 0;}
+h3{font-size: 35px;}
+h4{font-size: 23px;}
 
-h3 {
-    font-size: 35px;
-    font-weight: 500;
-    text-align: center;
-}
-
-h4 {
-    font-size: 23px;
-    font-weight: 500;
-    text-align: center;
-}
-
-img.hero {
-    width: calc(var(--master_width) - 60px);
-    border: 3px solid grey;
+img.profile {
+    width: calc(var(--width) - 60px);
     border-radius: 20px;
 }
 
+.reflink{
+    background-color: var(--black);
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.contact h3{
+  margin-bottom: 0;  
+}
+
+/* main div */
+
+div.main {
+    width: calc(var(--width) - 50px);
+    padding: 1px 25px 15px;
+    margin-bottom: 50px;
+    background-color: var(--background);
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0px 0px 4px 10px var(--white);
+}
+
+.main li{
+    text-align: left;
+    font-size: large;
+    color: silver;
+    line-height: 170%;
+}
+
+.main p{
+    text-align: left;
+    padding: 10px;
+}
+
+
 /* header */
-/* ###### */
 
 div.header {
     font-size: 18px;
     color: var(--foreground);
-    width: calc(var(--master_width) - 50px);
     padding: 0 25px 0 25px;
     margin: 10px 0 15px 0;
     text-align: center;
 }
 
+div.header .nav{
+    background-color: var(--white);
+    border: 2px solid silver;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.header a{
+    color: var(--grey);
+    font-size: 4vh;
+}
+
 /* nav */
-/* ### */
 
 ul.nav {
     margin: 0;
-    padding: 3px 0 9px 0;
-    border-bottom: 1px solid var(--pale_dark_red);
+    padding: 3px 0 5px 0;
 }
 
 ul.nav li {
     display: inline;
     list-style-type: none;
-    padding: 0 5px 0 5px;
+    padding: 0 30px 0 5px;
     margin: 0;
     text-indent: 0;
     font-weight: 500;
 }
 
-/* CTAs */
-/* #### */
+/* book */
 
-a.book {
-    background-color: var(--red);
-    color: var(--white);
-    display: block;
-    width: 350px;
-    font-size: 17px;
-    text-align: center;
-    border: 1px solid var(--red);
-    border-radius: 10px;
-    height: 28px;
-    line-height: 28px;
-    margin: 0 auto 0 auto;
-    font-weight: 500;
+.book{
+    border-bottom: 2px solid var(--foreground);
+    margin-top: 25px;
 }
 
-a.book:hover {
-    background-color: var(--white);
-    color: var(--red);
-    text-decoration: none;
+.book img{
+    height: 300px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
 }
 
-p.subscribe {
-    color: var(--pale_dark_red);
-    font-style: italic;
-    margin: 18px 0 17px 0;
-    line-height: 17px;
-    font-size: 17px;    
+.book h3{
+    padding: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
-p.or {
-    color: var(--pale_dark_red);
-    font-style: italic;
-    margin: -2px 0 17px 0;
-    line-height: 17px;
-    font-size: 17px;
+.book p{
+    font-size: 18;
+    line-height: 1.4;
+    text-align: left;
+    margin-top: 0px;
 }
 
-/* ######################################################################### */
-/* ######################### individual page tweaks ######################## */
-/* ######################################################################### */
-
-
-/* index */
-/* ##### */
-
-ul.this_i_believe li {
-    margin-bottom: 14px;
+.book:last-of-type{
+    border-bottom: none;
 }
 
-/* about */
-/* ##### */
-
-ul.about li {
-    margin-bottom: 14px;
-}
-
-/* testimonials */
-/* ############ */
-
-div.testimonial {
-    font-size: 18px;
-    line-height: 150%;
-    margin: 0 75px 50px; 
-    padding: 4px 12px 0 12px;
-    border: 2px solid var(--pale_dark_red);
-    border-radius: 10px;
-}
-
-div.testimonial p {
-    margin: 10px 0 10px 0;
-}
-
-blockquote {
-    border-left: 1px solid var(--pale_dark_red);
-    padding-left: 8px;
-    margin: 0;
-}
-
-/* content lists */
-/* ############# */
-
-ul.content li {
-    margin-bottom: 6px;
-}
-
-span.content_subtitle {
-    display: inline-block;
-    font-size: 18px;
-    line-height: 150%;
-}
-
-/* ######################################################################### */
-/* #################### mobile adjustments (embiggify things) ############## */
-/* ######################################################################### */
+/* responsive logic */
 
 @media screen and (max-width: 767px) {
     input.newsletter, button.subscribe, a.book {
@@ -248,51 +190,4 @@ span.content_subtitle {
     h4 {
         font-size: 30px;
     }
-}
-
-.book{
-    border-bottom: 2px solid black;
-    margin-top: 10px;
-}
-
-.book img{
-    height: 300px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.book h3{
-    padding: 20px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.book p{
-    font-size: 18;
-    line-height: 1.3;
-    text-align: left;
-    margin-top: 0px;
-}
-
-.book:last-of-type{
-    border-bottom: none;
-}
-
-.reflink{
-    background-color: white;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.main li{
-    text-align: left;
-}
-
-.main p{
-    text-align: left;
-    padding: 10px;
-}
-
-.contact h3{
-  margin-bottom: 0;  
 }
