@@ -40,7 +40,7 @@ h3{font-size: 35px;}
 h4{font-size: 23px;}
 
 img.profile {
-    width: calc(var(--width) - 60px);
+    width: calc(var(--width) - 300px);
     border-radius: 20px;
 }
 
